@@ -1,4 +1,5 @@
 import asyncHandler from "express-async-handler";
+
 //@desc     Auth user/set token
 //@routes   POST api/users/auth
 //@access   Public
