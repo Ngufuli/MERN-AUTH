@@ -17,7 +17,7 @@ const registerUser = asyncHandler( async (req, res)=>{
 
     const userExists = User.findOne({email});
 
-    if(userExist){
+    if(userExists){
         res.status(400);
         throw new Error(`User already exists`);
     }
@@ -39,7 +39,6 @@ const registerUser = asyncHandler( async (req, res)=>{
         throw new Error(`Invalid user data`)
     }
 
-    res.status(200).json({message: 'Register User'});
 })
 
 
