@@ -7,6 +7,7 @@ const RegisterScreen = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
     const submitHandler = async (e) => {
         e.preventDefaul();
@@ -46,6 +47,17 @@ const RegisterScreen = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 ></Form.Control>
             </Form.Group>
+
+            <Form.Group className="my-2" controlId="confirmPassword">
+                <Form.Label>Confirm Password: </Form.Label>
+                <Form.Control
+                type="password"
+                placeholder="Confirm password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                ></Form.Control>
+            </Form.Group>
+
 
             <Button
             type="button"
