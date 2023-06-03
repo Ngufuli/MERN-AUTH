@@ -8,11 +8,13 @@ import {createBrowserRouter,
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
 import HomeScreen from './screens/homeScreen.jsx';
+import LoginScreen from './screens/LoginScreen.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
       <Route index={true} path='/' element={<HomeScreen/>}/>
+      <Route path='/login' element={<LoginScreen/>}/>
     </Route>
   )
 );
