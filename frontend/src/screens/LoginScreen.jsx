@@ -6,7 +6,7 @@ import FormContainer from '../components/FormContainer';
 import {useLoginMutation} from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
 import {toast} from 'react-toastify';
-
+import Loader from '../components/Loader'
 
 
 const LoginScreen = () => {
@@ -62,6 +62,7 @@ useEffect(()=>{
           ></Form.Control>
         </Form.Group>
 
+        {isLoading && <Loader></Loader>}
         <Button
           type='submit'
           variant='primary'
